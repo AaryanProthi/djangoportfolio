@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryan Prothi - Aspiring Web Developer, Programmer and ML/DS Enthusiast</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<!-- <div id = "preloader"></div> -->
+
+<body>
+
+    <section class='header'>
+        <nav>
+            <a href="{% url 'index' %}"><img src="{% static 'images/namelogo4.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+
+                    <li><a href="#education" class="link">EDUCATION</a></li>
+                    <li><a href="#skills" class="link">SKILLS</a></li>
+                    <li><a href="#hobbies" class="link">HOBBIES</a></li>
+                    <li><a href="#photos" class="link">PHOTOS</a></li>
+                    <li><a href="#contact" class="link">COLLABORATE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1><span class="auto-input"></span></h1>
+            <p>Hey there! I am Aaryan Prothi. We don't know each other, but I really hope to meet you soon.</p>
+            <p>Aspiring Developer, Musician and a Sports lover</p>
+            <a class="anchorpad" href="{% url 'achievements' %}"><button class="glow-on-hover">Check My
+                    Achievements <i class="fa fa-trophy"></i></button></a>
+            <a class="anchorpad" href="{% url 'message' %}"><button class="glow-on-hover abc">Say Hello! <i
+                        class="fa fa-commenting"></i></button></a>
+        </div>
+    </section>
+
+    <!----------education ----------------->
+
+    <section class="education" id="education">
+        <h1>Education</h1>
+
+        <div class="row">
+            <div class="education-col-1" data-aos="flip-up">
+                <img src="{% static 'images/tis.jpeg' %}">
+                <h3>School</h3>
+                <p>I completed my High School Study from The Indian School, New Delhi. Founded in 1996, by the Gyan
+                    Mandir Society in the heart of South Delhi, The Indian School prepares students for the Central
+                    Board of Secondary Education.</p>
+            </div>
+            <div class="education-col-2" data-aos="flip-up">
+                <img src="{% static 'images/nsut.jpeg' %}">
+                <h3>Undergrad Degree</h3>
+                <p>I am pursuing BTech in Instrumentation and Control Engineering(ICE) from Netaji Subhas University of
+                    Technology(NSUT). Aforementioned college is one of the most prestigious BTech colleges of the
+                    country.</p>
+            </div>
+        </div>
+    </section>
+
+    <!------skills------->
+    <section class="footer" id="skills">
+        <h1>Skills</h1>
+        <div class="row">
+            <div class="skill-col" data-aos="fade-up">
+                <img src="{% static 'images/coding.png' %}">
+                <h3>Pragramming Languages</h3>
+                <ul>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="skill-col" data-aos="fade-up">
+                <img src="{% static 'images/webdev.png' %}">
+                <h3>WebDev Languages</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div class="skill-col" data-aos="fade-up">
+                <img src="{% static 'images/django.png' %}">
+                <h3>Python Web Framework</h3>
+                <h4>DJANGO</h4>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-------hobbies-------->
+
+    <section class="hobbies" id="hobbies">
+        <h1>HOBBIES</h1>
+        <div class="row">
+            <div class="hobbies-col" data-aos="slide-up">
+                <img src="{% static 'images/cricket.png' %}">
+                <h3>CRICKET</h3>
+            </div>
+            <div class="hobbies-col" data-aos="slide-up">
+                <img src="{% static 'images/novel.png' %}">
+                <h3>READING</h3>
+            </div>
+            <div class="hobbies-col" data-aos="slide-up">
+                <img src="{% static 'images/coding2.png' %}">
+                <h3>CODING</h3>
+            </div>
+            <div class="hobbies-col" data-aos="slide-up">
+                <img src="{% static 'images/piano.png' %}">
+                <h3>PLAYING A PIANO</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!------photogallery-------->
+
+    <section class="pics" id="photos">
+        <h1>Photo Gallery</h1>
+
+        <div class="row">
+            <div class="pic-col" data-aos="zoom-out">
+                <img src="{% static 'images/mypic2-min.jpg' %}">
+            </div>
+            <div class="pic-col" data-aos="zoom-out">
+                <img src="{% static 'images/mypic-min.jpg' %}">
+            </div>
+            <div class="pic-col" data-aos="zoom-out">
+                <img src="{% static 'images/mypic4-min.jpg' %}">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ----footer(contact)---- -->
+    <section class="cta" id="contact" data-aos="zoom-out-down">
+        <h1>Let's Get in Touch!</h1>
+        <a href="{% url 'contact' %}" class="hero-btn">CONNECT WITH ME</a>
+        <div class="icons">
+            <a href="https://www.youtube.com/channel/UCMuev47Xs_3dHh6fvmDgj-g" target="_blank"><i
+                    class="fa fa-youtube"></i></a>
+            <a href="https://www.instagram.com/aaryanpro_2647/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/aaryan-prothi-55603122b/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/AaryanProthi" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+        <p>Brought to life by Aaryan Prothi <i class="fa fa-hand-peace-o">.</i></p>
+        <p>Copyright &copy; 2022 | All rights reserved</p>
+    </section>
+
+    <!-- -----scrolling javascript----- -->
+    <script src="{% static 'js/script.js'%}"></script>
+
+</body>
+
+
+<!-- ----autotyping javascript----- -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input", {
+        strings: ["Let's Build Something Great Together! :)"],
+        typeSpeed: 60,
+        showCursor: false,
+        loop: false
+    })
+</script>
+
+<!-- javascript for toggle menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+<!-- ----preloader javascript----
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+        })
+</script> -->
+
+
+<!-- ----fade javascript----- -->
+
+<script>
+    var wrapper = document.getElementsByClassName("text-box .p")[0];
+
+    wrapper.innerHTML = wrapper.textContent.replace(/ ./g, "<span>$&</span>");
+
+    var spans = wrapper.getElementsByTagName("span");
+
+    for (var i = 0; i < spans.length; i++) {
+        spans[i].style.animationDelay = i * 80 + "ms";
+    }
+</script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
+</html>

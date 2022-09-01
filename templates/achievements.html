@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryan Prothi - Aspiring Web Developer, Programmer and ML/DS Enthusiast</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class='sub-header-2'>
+        <nav>
+            <a href="{% url 'index' %}"><img src="{% static 'images/namelogo4.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+
+                    <li><a href="{% url 'index' %}" class="link">HOME</a></li>
+                    <li><a href="{% url 'index' %}#skills" class="link">SKILLS</a></li>
+                    <li><a href="{% url 'index' %}#hobbies" class="link">HOBBIES</a></li>
+                    <li><a href="{% url 'index' %}#photos" class="link">PHOTOS</a></li>
+                    <li><a href="{% url 'index' %}#education" class="link">EDUCATION</a></li>
+                    <li><a href="{% url 'index' %}#contact" class="link">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1><span class="auto-input"></span></h1>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h4>Achievements are the building blocks that enable someone to construct a sense of themselves as a success. The
+            achievements that matter most combine to form a version of success that has meaning and substance for the
+            individual.</h4>
+
+        <div class="row">
+            <div class="education-col-1" data-aos="flip-down">
+                <h3>CODE++</h3>
+                <p>Participated in CODE++ event held at CODE 2020 Annual Computer Symposium, Apeejay School, Noida and
+                    secured 2nd position.</p>
+            </div>
+            <div class="education-col-1" data-aos="flip-down">
+                <h3>INSPIRE Internship Program</h3>
+                <p>Participated and successfully completed the 'INSPIRE Internship Programme-2019' organized by
+                    Deshbandhu College, University of Delhi, for class 10 board toppers held from December 17-21, 2019.
+                </p>
+            </div>
+            <div class="education-col-1" data-aos="flip-down">
+                <h3>TIMES NIE THINK & LEARN CHALLENGE</h3>
+                <p>Participated and successfully qualified for the city finals of TIMES NIE THINK & LEARN CHALLENGE
+                    2015-2016.</p>
+            </div>
+            <div class="education-col-1" data-aos="flip-down">
+                <h3>Young Author's Program</h3>
+                <p>Was a part of the "Young Author's Program" organized by NASA in the US.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="foot">
+        <p>Brought to life by Aaryan Prothi <i class="fa fa-hand-peace-o"></i>.</p>
+        <p>Copyright &copy; 2022 | All rights reserved</p>
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+    
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+    
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+<!-- ----autotyping javascript------- -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input", {
+        strings: ["Achievements"],
+        typeSpeed: 125,
+        showCursor: false,
+        loop: false,
+    })
+</script>
+
+<!-- ----fade javascript----- -->
+
+<script>
+    var wrapper = document.getElementsByClassName("education .h4")[0];
+
+    wrapper.innerHTML = wrapper.textContent.replace(/ ./g,"<span>$&</span>");
+
+    var spans = wrapper.getElementsByTagName("span");
+
+    for(var i=0; i<spans.length; i++){
+        spans[i].style.animationDelay = i*80+"ms";
+    }
+</script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>

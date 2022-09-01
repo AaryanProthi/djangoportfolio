@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryan Prothi - Aspiring Web Developer, Programmer and ML/DS Enthusiast</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class='sub-header'>
+        <nav>
+            <a href="{% url 'index' %}"><img src="{% static 'images/namelogo4.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+
+                    <li><a href="{% url 'index' %}" class="link">HOME</a></li>
+                    <li><a href="{% url 'index' %}#skills" class="link">SKILLS</a></li>
+                    <li><a href="{% url 'index' %}#hobbies" class="link">HOBBIES</a></li>
+                    <li><a href="{% url 'index' %}#photos" class="link">PHOTOS</a></li>
+                    <li><a href="{% url 'index' %}#education" class="link">EDUCATION</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1><span class="auto-input"></span></h1>
+        </div>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <form action="https://formspree.io/f/mgeqvoda" method="POST" />
+                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                    <input type="email" name="Email" placeholder="Enter Email Address" required>
+                    <input type="text" name="Subject" placeholder="Enter Your Subject" required>
+                    <textarea rows="8" name="Message" placeholder="Message"></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="foot">
+        <p>Brought to life by Aaryan Prothi <i class="fa fa-hand-peace-o"></i>.</p>
+        <p>Copyright &copy; 2022 | All rights reserved</p>
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input", {
+        strings: ["Let's Join Forces!"],
+        typeSpeed: 100,
+        showCursor: false,
+        loop: false,
+    })
+</script>
